@@ -18,7 +18,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/gin-gonic/gin/binding"
-	"gopkg.in/telegram-bot-api.v4"
+	tgbotapi "gopkg.in/telegram-bot-api.v4"
 	"gopkg.in/yaml.v2"
 
 	"html/template"
@@ -338,8 +338,6 @@ func telegramBot(bot *tgbotapi.BotAPI) {
 					introduce(update)
 				}
 			}
-		} else if update.Message != nil && update.Message.Text != "" {
-			introduce(update)
 		}
 	}
 }
